@@ -1,0 +1,19 @@
+= simple_form_for(@home) do |f|
+  = f.error_notification
+  = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
+
+  .form-inputs
+    = f.input :home_type
+    = f.input :title
+    = f.input :description
+    = f.input :khmer24_ad_id
+    = f.input :location
+    = f.input :posted
+    = f.input :view
+    = f.input :bedroom
+    = f.input :bathroom
+    = f.input :size
+    = f.input :price
+
+  .form-actions
+    = f.button :submit

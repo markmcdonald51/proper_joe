@@ -1,0 +1,27 @@
+h1 Listing media_links
+
+table
+  thead
+    tr
+      th Text
+      th Link
+      th Linkableable
+      th Position
+      th
+      th
+      th
+
+  tbody
+    - @media_links.each do |media_link|
+      tr
+        td = media_link.text
+        td = media_link.link
+        td = media_link.linkableable
+        td = media_link.position
+        td = link_to 'Show', media_link
+        td = link_to 'Edit', edit_media_link_path(media_link)
+        td = link_to 'Destroy', media_link, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Media link', new_media_link_path

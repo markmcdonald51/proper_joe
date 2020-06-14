@@ -1,0 +1,41 @@
+h1 Listing homes
+
+table
+  thead
+    tr
+      th Home type
+      th Title
+      th Description
+      th Khmer24 ad
+      th Location
+      th Posted
+      th View
+      th Bedroom
+      th Bathroom
+      th Size
+      th Price
+      th
+      th
+      th
+
+  tbody
+    - @homes.each do |home|
+      tr
+        td = home.home_type
+        td = home.title
+        td = home.description
+        td = home.khmer24_ad_id
+        td = home.location
+        td = home.posted
+        td = home.view
+        td = home.bedroom
+        td = home.bathroom
+        td = home.size
+        td = home.price
+        td = link_to 'Show', home
+        td = link_to 'Edit', edit_home_path(home)
+        td = link_to 'Destroy', home, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Home', new_home_path

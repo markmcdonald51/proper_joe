@@ -1,0 +1,23 @@
+h1 Listing agents
+
+table
+  thead
+    tr
+      th References
+      th References
+      th
+      th
+      th
+
+  tbody
+    - @agents.each do |agent|
+      tr
+        td = agent.references
+        td = agent.references
+        td = link_to 'Show', agent
+        td = link_to 'Edit', edit_agent_path(agent)
+        td = link_to 'Destroy', agent, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Agent', new_agent_path

@@ -1,0 +1,36 @@
+h1 Listing companies
+
+/ table.table.table-striped.table-hover.datatable
+table[class="table table-bordered. table-striped table-hover table-sm datatable" id='company_table']
+  thead
+    tr
+      th Name
+      th Address
+      th Website
+      th Phone number
+      th Lat
+      th Lng
+      th Photo
+      th
+      th
+      th
+
+  tbody
+    - @companies.each do |company|
+      tr
+        td = company.name
+        td = company.address
+        td = company.website
+        td = company.phone_number
+        td = company.lat
+        td = company.lng
+        td = company.photo
+        td = link_to 'Show', company
+        td = link_to 'Edit', edit_company_path(company)
+        td = link_to 'Destroy', company, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Company', new_company_path
+
+

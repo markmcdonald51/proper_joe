@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Text:
+  = @media_link.text
+p
+  strong Link:
+  = @media_link.link
+p
+  strong Linkableable:
+  = @media_link.linkableable
+p
+  strong Position:
+  = @media_link.position
+
+=> link_to 'Edit', edit_media_link_path(@media_link)
+'|
+=< link_to 'Back', media_links_path

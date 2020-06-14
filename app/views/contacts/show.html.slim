@@ -1,0 +1,36 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @contact.name
+p
+  strong Address:
+  = @contact.address
+p
+  strong Wechat:
+  = @contact.wechat
+p
+  strong Facebook:
+  = @contact.facebook
+p
+  strong Lat:
+  = @contact.lat
+p
+  strong Lng:
+  = @contact.lng
+p
+  strong Email:
+  = @contact.email
+p
+  strong Phone:
+  = @contact.phone
+p
+  strong Mobile:
+  = @contact.mobile
+p
+  strong Description:
+  = @contact.description
+
+=> link_to 'Edit', edit_contact_path(@contact)
+'|
+=< link_to 'Back', contacts_path

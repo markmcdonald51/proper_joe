@@ -1,0 +1,39 @@
+p#notice = notice
+
+p
+  strong Home type:
+  = @home.home_type
+p
+  strong Title:
+  = @home.title
+p
+  strong Description:
+  = @home.description
+p
+  strong Khmer24 ad:
+  = @home.khmer24_ad_id
+p
+  strong Location:
+  = @home.location
+p
+  strong Posted:
+  = @home.posted
+p
+  strong View:
+  = @home.view
+p
+  strong Bedroom:
+  = @home.bedroom
+p
+  strong Bathroom:
+  = @home.bathroom
+p
+  strong Size:
+  = @home.size
+p
+  strong Price:
+  = @home.price
+
+=> link_to 'Edit', edit_home_path(@home)
+'|
+=< link_to 'Back', homes_path
