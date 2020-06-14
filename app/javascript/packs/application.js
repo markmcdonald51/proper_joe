@@ -50,5 +50,5 @@ import JQuery from 'jquery';
 window.$ = window.JQuery = JQuery;
 global.$ = jQuery;
 
-Chartkick.configure({language: "en", mapsApiKey: "AIzaSyAXYKxXDt9JiiELFw1aKFPwHJFJrqMdSXo"})
+Chartkick.configure({language: "en", mapsApiKey: ""})
 
